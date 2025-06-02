@@ -18,6 +18,6 @@ export function parseServerActionResponse<T>(response: T) {
 }
 
 export function formatViewNumber(totalViews: number){
-  if(totalViews == 1) return "1 View";
+  if(totalViews < 2) return "1 View";
   else return `${totalViews} Views`
 }
