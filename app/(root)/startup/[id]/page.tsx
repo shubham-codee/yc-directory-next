@@ -8,11 +8,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import markdown from "markdown-it";
-import { Suspense } from "react";
-import { Skeleton } from "@/components/ui/skeleton";
 import View from "@/components/View";
 import StartUpCard, { StartUpCardType } from "@/components/StartUpCard";
-import ViewWrapper from "@/components/ViewWrapper";
 
 const md = markdown();
 
@@ -95,7 +92,7 @@ export default async function Page({
           </div>
         )}
 
-        <ViewWrapper id={id} />
+        <View id={id} />
       </section>
     </>
   );
