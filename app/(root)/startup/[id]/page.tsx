@@ -12,10 +12,9 @@ import { Suspense } from "react";
 import { Skeleton } from "@/components/ui/skeleton";
 import View from "@/components/View";
 import StartUpCard, { StartUpCardType } from "@/components/StartUpCard";
+import ViewWrapper from "@/components/ViewWrapper";
 
 const md = markdown();
-
-export const experimental_ppr = true;
 
 export default async function Page({
   params,
@@ -96,9 +95,7 @@ export default async function Page({
           </div>
         )}
 
-        <Suspense fallback={<Skeleton className="view_skeleton" />}>
-          <View id={id} />
-        </Suspense>
+        <ViewWrapper id={id} />
       </section>
     </>
   );
